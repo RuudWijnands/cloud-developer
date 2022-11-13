@@ -59,7 +59,7 @@ router.patch('/:id',
 
         const result = await FeedItem.update({ caption: caption, url: url}, {where: {id: id}});
         console.log(result);
-        return res.status(200).send(result);
+        return res.status(201).send(result);
 });
 
 
