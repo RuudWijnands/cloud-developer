@@ -1,22 +1,22 @@
 export const config = {
-  "dev": {
-    "username": "",
-    "password": "",
-    "database": "",
-    "host": "",
-    "dialect": "postgres",
-    "aws_region": "us-east-2",
-    "aws_profile": "default",
-    "aws_media_bucket": "udagram-ruttner-dev"
+  'dev': {
+    'username': 'udacityrjmdbdev',
+    'password': 'udacityrjmdbdev',
+    'database': 'udacityrjmdbdev',
+    'host': 'udacityrjmdbdev.ctym96fcnsyd.us-east-1.rds.amazonaws.com',
+    'dialect': 'postgres',
+    'aws_region': '',
+    'aws_profile': '',
+    'aws_media_bucket': ''
   },
-  "jwt": {
-    "secret": " "
+  'jwt': {
+    'secret': ' '
   },
-  "prod": {
-    "username": "",
-    "password": "",
-    "database": "udagram_prod",
-    "host": "",
-    "dialect": "postgres"
+  'prod': {
+    'username': '',
+    'password': '',
+    'database': '',
+    'host': '',
+    'dialect': 'postgres'
   }
-}
+};
