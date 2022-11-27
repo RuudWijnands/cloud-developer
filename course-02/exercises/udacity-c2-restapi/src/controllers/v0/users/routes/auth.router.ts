@@ -12,6 +12,7 @@ import {config} from '../../../../config/config';
 const router: Router = Router();
 
 async function generatePassword(plainTextPassword: string): Promise<string> {
+//    return "NotYetImplemented";
     const saltRounds = 10;
     const salt = await bcrypt.genSalt(saltRounds);
     return await bcrypt.hash(plainTextPassword, salt);
@@ -101,7 +102,7 @@ router.post('/', async (req: Request, res: Response) => {
 
     // find the user
     const user = await User.findByPk(email);
-    // check that user doesnt exists
+    // check that user doesn't exists
     if (user) {
         return res.status(422).send({ auth: false, message: 'User may already exist' });
     }
