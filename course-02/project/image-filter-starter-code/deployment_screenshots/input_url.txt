@@ -1,0 +1,2 @@
+I used the following URL as input: https://static01.nyt.com/images/2011/01/14/arts/14MOVING-span/MOVING-jumbo.jpg
+Running locally: http://localhost:8082/filteredimage?image_url=https://static01.nyt.com/images/2011/01/14/arts/14MOVING-span/MOVING-jumbo.jpg
