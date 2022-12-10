@@ -33,13 +33,19 @@ import {isValidURL, filterImageFromURL, deleteLocalFiles} from './util/util';
       return res.status(400).send("image_url is required!");
     }
 
-    if (!isValidURL({url: image_url})) {
+    if (!isValidURL(image_url)) {
       return res.status(400).send(`Invalid URL ${image_url}`);
     };
 
-    let filteredImage = filterImageFromURL(image_url);
-    console.log(filteredImage);
-    return res.status(200).sendFile(await filteredImage);
+    await filterImageFromURL(image_url).then( (result) => {
+      console.log(`Success `, result);
+      return res.status(200).sendFile(result, () => {
+        deleteLocalFiles([result]);
+      });
+    }).catch( (error) => {
+      console.log(`Error! `, error);
+      return res.status(400).send(`Error invalid image ${error}`);
+    })
   });
 
   /**************************************************************************** */

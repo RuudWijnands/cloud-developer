@@ -7,7 +7,7 @@ import Jimp = require("jimp");
 //  url: string - a string formatted as a url
 // RETURNS
 //  true when the string is a valid URL and false when it is not
-export const isValidURL= ({url}: { url: string }) => {
+export const isValidURL= (url: string) => {
   try {
     new URL(url);
     return true;
