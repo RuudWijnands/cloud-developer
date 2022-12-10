@@ -7,14 +7,14 @@ import Jimp = require("jimp");
 //  url: string - a string formatted as a url
 // RETURNS
 //  true when the string is a valid URL and false when it is not
-export const isValidURL= (url: string) => {
+/*export const isValidURL = (url) => {
   try {
     new URL(url);
     return true;
   } catch (err) {
     return false;
   }
-};
+};*/
 
 // filterImageFromURL
 // helper function to download, filter, and save the filtered image locally
