@@ -27,6 +27,11 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
   // RETURNS
   //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
 
+router.get('/filteredimage/:image_url', async (req: Request, res: Response) => {
+
+}
+
+
   /**************************************************************************** */
 
   //! END @TODO1
