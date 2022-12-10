@@ -1,6 +1,21 @@
 import fs from "fs";
 import Jimp = require("jimp");
 
+// isValidURL
+// helper function to check whether the passed URL is a valid or invalid URL
+// INPUTS
+//  url: string - a string formatted as a url
+// RETURNS
+//  true when the string is a valid URL and false when it is not
+export const isValidURL= ({url}: { url: string }) => {
+  try {
+    new URL(url);
+    return true;
+  } catch (err) {
+    return false;
+  }
+};
+
 // filterImageFromURL
 // helper function to download, filter, and save the filtered image locally
 // returns the absolute path to the local image
